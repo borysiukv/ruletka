@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Play roulette</title>
+    <script>
+        function redirectToRandomLink() {
+          const links = [
+            'https://borysiukv.github.io/rouletteexit/exit1.html',
+            'https://borysiukv.github.io/rouletteexit/exit2.html'
+          ];
+          const randomIndex = Math.floor(Math.random() * links.length);
+          const randomLink = links[randomIndex];
+          window.location.href = randomLink;
+        }
+      </script>
+      
+
+
+      <style>
+body {
+  background: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.glitch {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+  animation: glitch 725ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+      -0.04em -0.025em 0 #fffc00;
+  }
+}
+</style>
+  </head>
+  <body>
+    <div class="container">
+        <p class="glitch">
+          <span aria-hidden="true">aaaa</span>
+          ROULETTE
+          <span aria-hidden="true">aaaaa</span>
+        </p>
+      </div>
+      <div class="container">
+      <div class="centeri">
+        <div class="card">
+          
+          <img src="https://www.freeiconspng.com/thumbs/gun-png/gun-png-3.png" class="foto" style="width:100%">
+           <header>
+             <h1>GUN 1</h1>
+          </div>
+        </div>
+      <button onclick="redirectToRandomLink()">Choose me</button>
+
+      <div class="centeri">
+        <div class="card">
+        
+          <img src="https://www.freeiconspng.com/thumbs/gun-png/gun-png-3.png" class="foto" style="width:100%">
+           <header>
+             <h1>GUN 2</h1>
+          </div>
+        </div>
+        <button onclick="redirectToRandomLink()">Choose me</button>
+       </div>
+  </body>
+</html>
